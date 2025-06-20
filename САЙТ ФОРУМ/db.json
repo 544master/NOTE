@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "email": "admin",
+      "password": "ADMIN",
+      "name": "Администратор",
+      "photo": "",
+      "isAdmin": true
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Звенящая нота</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles1.css" />
+</head>
+<body>
+
+  <!-- Шапка -->
+  <header class="header">
+    <div class="logo">
+      <a href="MAIN.html"><img src="bg/logo.jpg" alt="Логотип Звеньяная нота"></a>
+    </div>
+    <p>Добро пожаловать на форум </p><h1>Звенящая нота</h1>
+    <p>Здесь вы можете задавать и обсуждать вопросы музыки, искать единомышленников и музыкантов, создавать группы и просто общаться.</p>
+  <div id="auth-nav" class="auth-section"></div>
+  </header>
+
+  <!-- Контейнер для основного контента -->
+  <div class="wrapper">
+
+    <!-- Левая колонка (меню + новости) -->
+    <aside class="left-column">
+      <nav class="menu">
+        <ul>
+          <li><a href="genres.html"><button class="menu-button">жанры</button></a></li>
+          <li><a href="chat.html"><button class="menu-button">Чаты</button></a></li>
+          <li><a href="form.html"><button class="menu-button">Создание групп</button></a></li>
+          <li><a href="recording studios.html"><button class="menu-button">Студии записи</button></a></li>
+          <li><a href="about the website.html"><button class="menu-button">О сайте</button></a></li>
+        </ul>
+      </nav>
+      <section class="news">
+        <h2>Новости</h2>
+      </section>
+      <section class="news">
+        <h2>Реклама</h2>
+      </section>
+     
+    </aside>
+
+    <!-- Основное содержимое -->
+    <main class="content">
+      <section class="main-info">
+        <h2>Главная новости музыки</h2>
+
+<h2>Создай группу или присоединяйся к проекту</h2>
+
+<form id="group-musician-form">
+  <label><strong>Я хочу:</strong></label><br>
+  <label><input type="radio" name="type" value="group" checked onclick="toggleForm()"> Создать группу</label>
+  <label style="margin-left: 15px;">
+    <input type="radio" name="type" value="musician" onclick="toggleForm()"> Присоединиться к группе
+  </label>
+
+  <div id="common-fields">
+    <label for="name">Имя / Название группы:</label>
+    <input type="text" id="name" name="name" required>
+  </div>
+
+  <div id="group-fields">
+    <label for="genre-group">Музыкальный жанр:</label>
+    <input type="text" id="genre-group" name="genre-group" placeholder="Рок, поп, джаз и т.д.">
+
+    <label for="members-needed">Кого ищем:</label>
+    <select id="members-needed" name="members-needed">
+      <option value="">Выберите роль</option>
+      <option value="Гитарист">Гитарист</option>
+      <option value="Басист">Басист</option>
+      <option value="Ударник">Ударник</option>
+      <option value="Клавишник">Клавишник</option>
+      <option value="Вокалист">Вокалист</option>
+      <option value="Продюсер">Продюсер</option>
+      <option value="Другое">Другое</option>
+    </select>
+
+    <label for="goal">Цель:</label>
+    <textarea id="goal" name="goal" rows="4" placeholder="Выступления, запись альбома..."></textarea>
+  </div>
+
+  <div id="musician-fields" class="hidden">
+    <label for="instrument">Какой инструмент играешь?</label>
+    <select id="instrument" name="instrument">
+      <option value="">Выбери инструмент</option>
+      <option value="Гитара">Гитара</option>
+      <option value="Бас">Бас</option>
+      <option value="Ударные">Ударные</option>
+      <option value="Клавишные">Клавишные</option>
+      <option value="Вокал">Вокал</option>
+      <option value="Другое">Другое</option>
+    </select>
+
+    <label for="experience">Опыт:</label>
+    <select id="experience" name="experience">
+      <option value="">Выбери уровень</option>
+      <option value="Начинающий">Начинающий</option>
+      <option value="Средний">Средний</option>
+      <option value="Профессионал">Профессионал</option>
+    </select>
+  </div>
+
+  <label for="location">Ты из какого города? Или работаешь онлайн?</label>
+  <input type="text" id="location" name="location" required>
+
+  <label for="contact">Как с тобой связаться? (email / Telegram / Instagram)</label>
+  <input type="text" id="contact" name="contact" required>
+
+  <button type="submit">Отправить анкету</button>
+  <p><a href="list.html">Посмотреть список анкет</a></p>
+</form>
+
+<div id="success-message-group" class="hidden">
+  Спасибо! Твоя анкета отправлена.
+</div>
+
+<script src="script.js"></script>
+<script>
+  window.onload = renderAuthNav;
+  toggleForm();
+</script>
+
+      </section>
+    </main>
+    <div style="clear:both;"></div>
+
+
+ <!-- Скрипт Google Translate -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: 'ru',
+          includedLanguages: 'en,es,de,fr,it,zh-CN,ja,ko,ru',
+          layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+        },
+        'google_translate_element'
+      );
+    }
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  </div>
+
+  <!-- Подвал -->
+  <footer class="footer">
+    <p>© 2023 Звенящая нота. Все права защищены.</p> <div id="google_translate_element"></div>
+  </footer>
+
+
+<script>
+  window.onload = renderAuthNav;
+</script>
+</body>
+</html>

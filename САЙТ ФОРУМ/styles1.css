@@ -1,0 +1,121 @@
+body {
+  font-family: Arial;
+ 
+  background-color: #f4f4f4;
+}
+
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+  padding: 10px 20px;
+}
+
+.navbar a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.auth-section {
+  float: right;
+  margin-top: 10px;
+}
+
+.auth-section img {
+  vertical-align: middle;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.auth-section button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.form-section, .profile-section, .admin-section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.hidden {
+  display: none;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+
+.chat-box {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  height: 300px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.actions {
+  margin-top: 10px;
+}
+
+.actions button {
+  margin-right: 10px;
+}
+
+.filters {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 8px;
+  position: relative;
+}
+
+.close-btn {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+  color: #aaa;
+}

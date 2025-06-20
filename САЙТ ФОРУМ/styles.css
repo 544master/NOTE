@@ -1,0 +1,241 @@
+/* Обнуление */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(bg/Безымянный-1.jpg);
+  background-size: cover;
+  background-attachment: scroll;
+  color: #333;
+}
+
+/* Шапка */
+.header {
+  text-align: center;
+  padding: 20px;
+  width: 90%;
+  min-height: 200px;
+   margin: 0 auto;
+  background-color: #fff1a1aa;
+  border-radius: 10px;
+  border:1px black solid;
+}
+.logo img {
+  width: 160px;
+  vertical-align: middle;
+  float: left;
+}
+.header h1 {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 24px;
+
+  color: rgb(22, 150, 150);
+}
+.header p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+/* Обёртка основного контента */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+}
+/* Левая колонка (меню + новости) */
+.left-column {
+  width: 20%;
+  float: left;
+  min-height: 300px;
+}
+.menu {
+  background-color:   #f6a966; 
+  padding: 20px;
+  border-radius: 10px;
+  border:1px black solid;
+}
+.menu ul {
+  list-style: none;
+}
+.menu li {
+  margin-bottom: 10px;
+  text-align: center;
+}
+.menu-button{
+  width: 95%;
+  border:1px black solid;
+  background-color: rgb(120, 27, 27);
+  padding: 5px 5% 5px 5%;
+  border-radius: 5px;
+   color: white;
+   font-weight: bold;
+}
+.menu-button:hover{
+  width: 95%;
+  border:1px black solid;
+  background-color: rgb(255, 41, 41);
+  padding: 5px 5% 5px 5%;
+  border-radius: 5px;
+   color: white;
+   font-weight: bold;
+}
+.menu a {
+  line-height: 1.6;
+}
+.news {
+  background-color: #f6a966; 
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border:1px black solid;
+}/* конец левой колонки (меню + новости) */
+
+/* Основное содержимое */
+.content {
+  width: 78%; /* Занимает всё остальное пространство */
+  float: right;
+  padding: 20px;
+  border-radius: 10px;
+  border:1px black solid;
+  background-color: aliceblue;
+}
+
+.content h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+/* Очистка потока */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Подвал */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #FFD700;
+  color: #333;
+}
+
+
+/* ggoogle translit*/
+#google_translate_element {
+  margin-bottom: 30px;
+}
+
+/*для приветствия */
+.welcome-section {
+  background-color: #ffffff; 
+  color: rgb(0, 0, 0);
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 800px;
+  margin: 40px auto;
+  border-radius: 12px;
+}
+.welcome-section h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.welcome-section p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.welcome-section ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+.welcome-section ul li {
+  background-color: rgba(255, 255, 255, 0.1);
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 5px;
+  border-radius: 25px;
+  font-size: 16px;
+}/*конец приветствия */
+
+/*начало стиля анкеты*/
+  .form-container {
+      background-color: white;
+      max-width: 600px;
+      margin: 0 auto 40px auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #8b0000;
+      margin-bottom: 20px;
+    }
+
+    form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    form input,
+    form select,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    form button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #8b0000;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #a52a2a;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .card {
+      background-color: #fff;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-left: 5px solid #8b0000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+/*конец стиля анкеты*/
+
+/*я карты*/
+ #map {
+            width: 860px;
+            height: 600px;
+            margin: 0;
+            border-radius: 10px;
+            padding: 0;
+        }
+        /*конец*/
+
+
+       

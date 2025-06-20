@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Звенящая нота</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+
+  <!-- Шапка -->
+  <header class="header">
+    <div class="logo">
+      <a href="MAIN.html"><img src="bg/logo.jpg" alt="Логотип Звеньяная нота"></a>
+      <h1>Звенящая нота</h1>
+    </div>
+    <p>Добро пожаловать на форум Звенящая нота.</p>
+    <p>Здесь вы можете задавать и обсуждать вопросы музыки, искать единомышленников и музыкантов, создавать группы и просто общаться.</p>
+  <div id="auth-nav" class="auth-section"></div>
+  </header>
+
+  <!-- Контейнер для основного контента -->
+  <div class="wrapper">
+
+    <!-- Левая колонка (меню + новости) -->
+    <aside class="left-column">
+      <nav class="menu">
+        <ul>
+          <li><a href="genres.html"><button class="menu-button">жанры</button></a></li>
+          <li><a href="chat.html"><button class="menu-button">Чаты</button></a></li>
+          <li><a href="form.html"><button class="menu-button">Создание групп</button></a></li>
+          <li><a href="recording studios.html"><button class="menu-button">Студии записи</button></a></li>
+          <li><a href="about the website.html"><button class="menu-button">О сайте</button></a></li>
+        </ul>
+      </nav>
+      <section class="news">
+        <h2>Новости</h2>
+      </section>
+      <section class="news">
+        <h2>Актуальные новости</h2>
+      </section>
+    </aside>
+
+    <!-- Основное содержимое -->
+    <main class="content">
+      <section class="main-info">
+        <h2>Главная информация</h2>
+      </section>
+     
+    </main>
+
+    <div style="clear:both;"></div>
+
+  </div>
+<script src="script.js"></script>
+<script>
+  window.onload = renderAuthNav;
+</script>
+  <!-- Подвал -->
+  <footer class="footer">
+    <p>© 2023 Звенящая нота. Все права защищены.</p>
+  </footer>
+
+  <script src="script.js"></script>
+<script>
+  window.onload = renderAuthNav;
+</script>
+</body>
+</html>

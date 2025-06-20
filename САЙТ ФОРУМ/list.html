@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Звенящая нота</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles1.css" />
+</head>
+<body>
+
+  <!-- Шапка -->
+  <header class="header">
+    <div class="logo">
+      <a href="MAIN.html"><img src="bg/logo.jpg" alt="Логотип Звеньяная нота"></a>
+    </div>
+    <p>Добро пожаловать на форум </p><h1>Звенящая нота</h1>
+    <p>Здесь вы можете задавать и обсуждать вопросы музыки, искать единомышленников и музыкантов, создавать группы и просто общаться.</p>
+  <div id="auth-nav" class="auth-section"></div>
+  </header>
+
+  <!-- Контейнер для основного контента -->
+  <div class="wrapper">
+
+    <!-- Левая колонка (меню + новости) -->
+    <aside class="left-column">
+      <nav class="menu">
+        <ul>
+          <li><a href="genres.html"><button class="menu-button">жанры</button></a></li>
+          <li><a href="chat.html"><button class="menu-button">Чаты</button></a></li>
+          <li><a href="form.html"><button class="menu-button">Создание групп</button></a></li>
+          <li><a href="recording studios.html"><button class="menu-button">Студии записи</button></a></li>
+          <li><a href="about the website.html"><button class="menu-button">О сайте</button></a></li>
+        </ul>
+      </nav>
+      <section class="news">
+        <h2>Новости</h2>
+      </section>
+      <section class="news">
+        <h2>Реклама</h2>
+      </section>
+     
+    </aside>
+
+    <!-- Основное содержимое -->
+    <main class="content">
+      <section class="main-info">
+        <h2>Главная новости музыки</h2>
+
+<!-- Форма фильтров -->
+<div class="filters">
+  <h3 style="text-align:center;">Фильтр анкет</h3>
+  <label>Имя:</label><br>
+  <input type="text" id="filter-name" placeholder="Введите имя или название группы"><br>
+
+  <label>Жанр:</label><br>
+  <input type="text" id="filter-genre" placeholder="Введите музыкальный жанр"><br>
+
+  <label>Город:</label><br>
+  <input type="text" id="filter-location" placeholder="Введите город или 'онлайн'"><br>
+
+  <label>Тип:</label><br>
+  <select id="filter-type">
+    <option value="">Все</option>
+    <option value="musician">Музыкант</option>
+    <option value="group">Группа</option>
+  </select>
+
+  <button onclick="applyFilters()">Применить фильтры</button>
+  <button onclick="resetFilters()" style="background:#a52a2a;">Сбросить</button>
+</div>
+
+<!-- Список музыкантов -->
+<div class="form-container">
+  <h2>Анкеты музыкантов</h2>
+  <div id="musician-list-container">
+    <p>Нет данных</p>
+  </div>
+</div>
+
+<!-- Список групп -->
+<div class="form-container">
+  <h2>Анкеты групп</h2>
+  <div id="group-list-container">
+    <p>Нет данных</p>
+  </div>
+</div>
+
+<!-- Модальное окно -->
+<div id="edit-modal" class="modal hidden">
+  <div class="modal-content">
+    <span id="close-modal" class="close-btn">&times;</span>
+    <h3>Редактировать анкету</h3>
+    <form id="edit-form">
+      <input type="hidden" id="edit-id">
+      <input type="hidden" id="edit-type">
+
+      <label for="edit-name">Имя / Название группы:</label>
+      <input type="text" id="edit-name" required>
+
+      <label for="edit-instrument">Инструмент:</label>
+      <select id="edit-instrument">
+        <option value="">Выберите инструмент</option>
+        <option value="Гитара">Гитара</option>
+        <option value="Бас">Бас</option>
+        <option value="Ударные">Ударные</option>
+        <option value="Клавишные">Клавишные</option>
+        <option value="Вокал">Вокал</option>
+        <option value="Другое">Другое</option>
+      </select>
+
+      <label for="edit-genre-group">Жанр:</label>
+      <input type="text" id="edit-genre-group">
+
+      <label for="edit-members-needed">Ищем (группа):</label>
+      <select id="edit-members-needed">
+        <option value="">Выберите роль</option>
+        <option value="Гитарист">Гитарист</option>
+        <option value="Басист">Басист</option>
+        <option value="Ударник">Ударник</option>
+        <option value="Клавишник">Клавишник</option>
+        <option value="Вокалист">Вокалист</option>
+        <option value="Продюсер">Продюсер</option>
+        <option value="Другое">Другое</option>
+      </select>
+
+      <label for="edit-goal">Цель:</label>
+      <textarea id="edit-goal"></textarea>
+
+      <label for="edit-experience">Опыт:</label>
+      <select id="edit-experience">
+        <option value="">Выбери уровень</option>
+        <option value="Начинающий">Начинающий</option>
+        <option value="Средний">Средний</option>
+        <option value="Профессионал">Профессионал</option>
+      </select>
+
+      <label for="edit-location">Локация:</label>
+      <input type="text" id="edit-location" required>
+
+      <label for="edit-contact">Контакт:</label>
+      <input type="text" id="edit-contact" required>
+
+      <button type="submit">Сохранить изменения</button>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+  window.onload = () => {
+    renderAuthNav();
+    showMusicianList();
+    showGroupList();
+  };
+</script>
+
+
+      </section>
+    </main>
+    <div style="clear:both;"></div>
+
+
+ <!-- Скрипт Google Translate -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: 'ru',
+          includedLanguages: 'en,es,de,fr,it,zh-CN,ja,ko,ru',
+          layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+        },
+        'google_translate_element'
+      );
+    }
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  </div>
+
+  <!-- Подвал -->
+  <footer class="footer">
+    <p>© 2023 Звенящая нота. Все права защищены.</p> <div id="google_translate_element"></div>
+  </footer>
+
+  
+
+</body>
+</html>
